@@ -75,7 +75,7 @@ protected:
 
 private:
   /** Block dimensions */
-  unsigned int m_BlockDims[3];
+//  unsigned int m_BlockDims[3];// error: private field 'm_BlockDims' is not used [-Werror,-Wunused-private-field]
 };
 }
 #endif // __mitkOclDataSetToDataSetFilter_h

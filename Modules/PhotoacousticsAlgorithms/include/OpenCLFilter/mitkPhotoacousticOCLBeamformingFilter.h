@@ -107,7 +107,7 @@ namespace mitk
     unsigned short m_ApodArraySize;
     unsigned int m_inputSlices;
 
-    unsigned short m_PAImage;
+//    unsigned short m_PAImage; //error: private field 'm_PAImage' is not used [-Werror,-Wunused-private-field]
 
     BeamformingSettings::Pointer m_Conf;
 
