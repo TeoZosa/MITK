@@ -714,6 +714,9 @@ Section "-Core installation"
   CreateDirectory "$SMPROGRAMS\$STARTMENU_FOLDER"
 @CPACK_NSIS_CREATE_ICONS@
 @CPACK_NSIS_CREATE_ICONS_EXTRA@
+    StrCmp $INSTALL_DESKTOP "1" 0 +2
+        CreateShortCut "$DESKTOP\@CPACK_PACKAGE_NAME@.lnk" "$INSTDIR\bin\@CPACK_PACKAGE_NAME@.exe"
+  CreateShortCut "$SMPROGRAMS\$STARTMENU_FOLDER\@CPACK_PACKAGE_NAME@.lnk" "$INSTDIR\bin\@CPACK_PACKAGE_NAME@.exe"
   CreateShortCut "$SMPROGRAMS\$STARTMENU_FOLDER\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
 
   ;Read a value from an InstallOptions INI file
