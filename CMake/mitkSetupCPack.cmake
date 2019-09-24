@@ -95,6 +95,10 @@ set(CPACK_RESOURCE_FILE_LICENSE "${MITK_SOURCE_DIR}/LICENSE.txt")
 set(CPACK_PACKAGE_VERSION_MAJOR ${MITK_REVISION_DESC})
 string(REPLACE " [local changes]" "-local_changes" CPACK_PACKAGE_VERSION_MAJOR ${CPACK_PACKAGE_VERSION_MAJOR})
 
+# target application to which downstream links (i.e. shortcuts) should correspond
+set(CPACK_APPLICATION_NAME "MitkWorkbench")
+
+
 # tell cpack to strip all debug symbols from all files
 set(CPACK_STRIP_FILES ON)
 
